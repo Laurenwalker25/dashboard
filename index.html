@@ -3,57 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="styleheet" href="style.css">
     <title>Data Table</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        #input { 
-            background-image: url('/css/searchicon.png');
-            background-position: 10px 10px;
-            background-repeat: no-repeat;
-            width: 100%;
-            font-size: 16px;
-            padding: 12px 20px 12px 40px;
-            border: 1px solid #ddd;
-            margin-bottom: 12px;
-        }
-
-        #table {
-            border-collapse: collapse;
-            width: 80%;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f2f2f2;
-            color: black;
-            margin: 20px auto;
-        }
-
-        #table th, #table td {
-            border: 1px solid black;
-            padding: 12px;
-            text-align: left;
-        }
-
-        #table th {
-            background-color: #f1f1f1;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            color: black;
-        }
-
-        #table tr.header, #table tr:hover {
-          background-color: #bfbfbf;
-        }
-
-        h2 {
-            text-align: center;
-            margin-top: 20px;
-            color: #333;
-        }
-    </style>
 </head>
 <body>
-
+  
 <h2>NCAA Men's College Basketball</h2>
 
 <input type="text" id="input" onkeyup="myFunction()" placeholder="Search for a team" title="Type in a team">
