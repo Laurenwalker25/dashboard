@@ -8,8 +8,7 @@
         * {
             box-sizing: border-box;
         }
-
-        #input {
+        #input { 
             background-image: url('/css/searchicon.png');
             background-position: 10px 10px;
             background-repeat: no-repeat;
@@ -30,20 +29,20 @@
         }
 
         #table th, #table td {
-            border: 2px solid black;
+            border: 1px solid black;
             padding: 12px;
             text-align: left;
         }
 
         #table th {
-            background-color: #bfbfbf;
+            background-color: #f1f1f1;
             padding-top: 10px;
             padding-bottom: 10px;
             color: black;
         }
 
         #table tr.header, #table tr:hover {
-            background-color: #f1f1f1;
+          background-color: #bfbfbf;
         }
 
         h2 {
@@ -55,7 +54,7 @@
 </head>
 <body>
 
-<h2>Data Table</h2>
+<h2>NCAA Men's College Basketball</h2>
 
 <input type="text" id="input" onkeyup="myFunction()" placeholder="Search for a team" title="Type in a team">
 
@@ -377,6 +376,6 @@
     </tr>
   </tbody>
 </table>
-<script src="script.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
