@@ -10,7 +10,6 @@
     display: block;
 }
 
-
 /* table */
 #table {
     border-collapse: collapse;
@@ -30,6 +29,7 @@
     text-align: center;
     background-color: #f1f1f1;
 }
+
 /* table header */
 #table th {
     background-color: black;
@@ -39,9 +39,9 @@
     border: black;
 }
 
-/* table cell hover */
-#table tr, #table tr:hover {
-  background-color: #bfbfbf;
+/* row hover */
+#table tr:hover {
+    background-color: #bfbfbf;
 }
 
 /* alternate color */
