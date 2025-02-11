@@ -24,10 +24,10 @@
 /* table header, table cell */
 #table th, #table td {
     border-bottom: 1px solid black;
-    border: 1px solid #f1f1f1;
+    border: 1px solid #e0e0e0;
     padding: 12px;
     text-align: center;
-    background-color: white;
+    background-color: #e0e0e0;
 }
 
 /* table header */
@@ -40,13 +40,13 @@
 }
 
 /* row hover */
-#table tr.header tr:hover {
+#table tr:hover {
     background-color: #bfbfbf !important;
 }
 
 /* alternate color */
 #table tr:nth-child(even) {
-    background-color: #f1f1f1 !important;
+    background-color: #e0e0e0 !important;
 }
 
 /* header */
