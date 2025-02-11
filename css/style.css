@@ -2,12 +2,14 @@
 #input { 
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    width: 80%;
+    width: 90%;
     font-size: 16px;
     padding: 12px 20px 12px 40px;
     border: 1px solid #ddd;
-    margin-bottom: 12px;
+    margin: 12px auto;
+    display: block;
 }
+
 
 /* table */
 #table {
@@ -38,13 +40,15 @@
 }
 
 /* table cell hover */
-#table tr.header, #table tr:hover {
+#table tr, #table tr:hover {
   background-color: #bfbfbf;
 }
 
+/* alternate color */
 #table tr:nth-child(even) {
-    background-color: white;
-  }
+    background-color: white !important;
+}
+
 
 /* header */
 h2 {
