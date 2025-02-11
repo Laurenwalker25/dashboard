@@ -1,9 +1,8 @@
 /* search bar */
 #input { 
-    background-image: url("css/searchicon.png");
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 80%;
     font-size: 16px;
     padding: 12px 20px 12px 40px;
     border: 1px solid #ddd;
@@ -24,7 +23,7 @@
 /* table header, table cell */
 #table th, #table td {
     border-bottom: 1px solid black;
-    border: 1px solid black;
+    border: 1px solid #f1f1f1;
     padding: 12px;
     text-align: center;
     background-color: #f1f1f1;
@@ -35,6 +34,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     color: white;
+    border: black;
 }
 
 /* table cell hover */
@@ -43,7 +43,7 @@
 }
 
 #table tr:nth-child(even) {
-    background-color: #dedede;
+    background-color: white;
   }
 
 /* header */
