@@ -21,16 +21,6 @@
     margin: 20px auto;
 }
 
-/* row hover */
-#table tr:hover {
-    background-color: #bfbfbf !important;
-}
-
-/* alternate color */
-#table tr:nth-child(even) {
-    background-color: #f1f1f1 !important;
-}
-
 /* table header, table cell */
 #table th, #table td {
     border-bottom: 1px solid black;
@@ -49,8 +39,25 @@
     border: black;
 }
 
+/* row hover */
+#table tr.header tr:hover {
+    background-color: #bfbfbf !important;
+}
+
+/* alternate color */
+#table tr:nth-child(even) {
+    background-color: #f1f1f1 !important;
+}
+
 /* header */
 h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+
+/* subheader */
+h3 {
     text-align: center;
     margin-top: 20px;
     color: black;
