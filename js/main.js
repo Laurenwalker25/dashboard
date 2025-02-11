@@ -1,10 +1,10 @@
-function search_Function() {
+function searchFunction() {
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("input");
     filter = input.value.toUpperCase();
     table = document.getElementById("table");
     tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
+    for (i = 1; i < tr.length; i++) {
       td = tr[i].getElementsByTagName("td")[0];
       if (td) {
         txtValue = td.textContent || td.innerText;

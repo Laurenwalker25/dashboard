@@ -21,13 +21,23 @@
     margin: 20px auto;
 }
 
+/* row hover */
+#table tr:hover {
+    background-color: #bfbfbf !important;
+}
+
+/* alternate color */
+#table tr:nth-child(even) {
+    background-color: #f1f1f1 !important;
+}
+
 /* table header, table cell */
 #table th, #table td {
     border-bottom: 1px solid black;
     border: 1px solid #f1f1f1;
     padding: 12px;
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: white;
 }
 
 /* table header */
@@ -38,17 +48,6 @@
     color: white;
     border: black;
 }
-
-/* row hover */
-#table tr:hover {
-    background-color: #bfbfbf;
-}
-
-/* alternate color */
-#table tr:nth-child(even) {
-    background-color: white !important;
-}
-
 
 /* header */
 h2 {
