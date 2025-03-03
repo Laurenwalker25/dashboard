@@ -1,4 +1,5 @@
 // function for search bar
+/*
 function searchFunction() {
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("input");
@@ -16,6 +17,19 @@ function searchFunction() {
         }
       }       
     }
+  */
+  function searchFunction() {
+      let input = document.getElementById("input").value.toUpperCase();
+      let table = document.getElementById("table");
+      let tr = table.getElementsByTagName("tr");
+  
+      for (let i = 1; i < tr.length; i++) {
+          let td = tr[i].getElementsByTagName("td")[0]; // Search by team name
+          if (td) {
+              let txtValue = td.textContent || td.innerText;
+              tr[i].style.display = txtValue.toUpperCase().indexOf(input) > -1 ? "" : "none";
+          }
+      }
   }
 
 // function for tabs
@@ -41,4 +55,6 @@ function openPage(pageName, elmnt, color) {
   }
   
   // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+  window.onload = function () {
+    document.getElementById("defaultOpen").click();
+};
