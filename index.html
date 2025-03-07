@@ -386,9 +386,14 @@
       let tr = table.getElementsByTagName("tr");
   
       for (let i = 1; i < tr.length; i++) {
-          let td = tr[i].getElementsByTagName("td")[0]; // Search by team name
-          if (td) {
-              let txtValue = td.textContent || td.innerText;
+          let name = tr[i].getElementsByTagName("td")[0]; // Search by team name
+          if (name) {
+              let txtValue = name.textContent || name.innerText;
+              tr[i].style.display = txtValue.toUpperCase().indexOf(input) > -1 ? "" : "none";
+          }
+          let conf = tr[i].getElementsByTagName("td")[5]; // Search by conference
+          if (conf) {
+              let txtValue = conf.textContent || conf.innerText;
               tr[i].style.display = txtValue.toUpperCase().indexOf(input) > -1 ? "" : "none";
           }
       }
