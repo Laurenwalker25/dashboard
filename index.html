@@ -12,8 +12,8 @@
       }
     </style>
 </head>
-<body>
 
+<body>
 <div class="tab">
   <button class="tablinks" onclick="openPage('Welcome', this, 'white')" id="defaultOpen">Welcome</button>
   <button class="tablinks" onclick="openPage('Week 14', this, 'white')">Week 14</button>
@@ -371,6 +371,44 @@
   <h3>Stats on Week 16's AP Top 25 Teams</h3>
   <p>To be updated soon..</p>
 </div>
+
+<script>
+  function searchFunction() {
+      let input = document.getElementById("input").value.toUpperCase();
+      let table = document.getElementById("table");
+      let tr = table.getElementsByTagName("tr");
+  
+      for (let i = 1; i < tr.length; i++) {
+          let td = tr[i].getElementsByTagName("td")[0]; // Search by team name
+          if (td) {
+              let txtValue = td.textContent || td.innerText;
+              tr[i].style.display = txtValue.toUpperCase().indexOf(input) > -1 ? "" : "none";
+          }
+      }
+  }
+
+// function for tabs
+  function openPage(pageName, elmnt, color) {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Remove the background color of all tablinks/buttons
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+  
+    // Show the specific tab content
+    document.getElementById(pageName).style.display = "block";
+  
+    // Add the specific color to the button used to open the tab content
+    elmnt.style.backgroundColor = color;
+  }
+</script>
 
 </body>
 </html>
