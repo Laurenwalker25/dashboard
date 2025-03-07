@@ -45,8 +45,8 @@
 }
 
 /* alternate color */
-#table tr:nth-child(even) {
-    background-color: #e0e0e0 !important;
+#table tbody tr:nth-child(even) {
+  background-color: #e0e0e0 !important;
 }
 
 /* header */
