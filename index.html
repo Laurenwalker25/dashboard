@@ -354,9 +354,9 @@
     <input type="text" id="input" onkeyup="searchFunction()" placeholder="Search for a team" title="Type in a team">
     
     <table id="table">
-      <thead>
-        <tr class="header" style="text-align: right;">
-          <th>Team</th>
+    <thead>
+    <tr class="header" style="text-align: right;">
+      <th>Team</th>
       <th>Record</th>
       <th>Ranking</th>
       <th>Wins (%)</th>
@@ -653,19 +653,16 @@
       let input = document.getElementById("input").value.toUpperCase();
       let table = document.getElementById("table");
       let tr = table.getElementsByTagName("tr");
-  
+      
       for (let i = 1; i < tr.length; i++) {
-          let name = tr[i].getElementsByTagName("td")[0]; // Search by team name
-          if (name) {
-              let txtValue = name.textContent || name.innerText;
-              tr[i].style.display = txtValue.toUpperCase().indexOf(input) > -1 ? "" : "none";
-          }
-          let conf = tr[i].getElementsByTagName("td")[4]; // Search by conference
-          if (conf) {
-              let txtValue = conf.textContent || conf.innerText;
-              tr[i].style.display = txtValue.toUpperCase().indexOf(input) > -1 ? "" : "none";
-          }
-      }
+        let name = tr[i].getElementsByTagName("td")[0]; // Team Name
+        let conf = tr[i].getElementsByTagName("td")[4]; // Conference
+        let nameText = name ? name.textContent || name.innerText : "";
+        let confText = conf ? conf.textContent || conf.innerText : "";
+
+        // Show row if search input matches either name or conference
+        tr[i].style.display = (nameText.toUpperCase().includes(input) || confText.toUpperCase().includes(input)) ? "" : "none";
+    }
   }
 
 // function for tabs
