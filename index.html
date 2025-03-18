@@ -1302,18 +1302,22 @@
 
 <div id="NCAA Tournament" class="tabcontent">
   <h2>NCAA Men's College Basketball</h2>
-  <h3>NCAA Tournament Bracket</h3>
-  <h5>Updated Daily</h5>
+  <h3>NCAA Tournament Bracket (3/17)</h3>
   <img src="/images/bracket-317.pdf" alt="Bracket 3/17">
 </div>
 
 <script>
-  function searchFunction() {
-      let input = document.getElementById("input").value.toUpperCase();
-      let table = document.getElementById("table");
-      let tr = table.getElementsByTagName("tr");
-      
-      for (let i = 1; i < tr.length; i++) {
+function searchFunction() {
+    let input = document.getElementById("input").value.toUpperCase();
+    let table = document.getElementById("table");
+    let tr = table.getElementsByTagName("tr");
+    
+    // Reset the display of all rows to visible before filtering
+    for (let i = 1; i < tr.length; i++) {
+        tr[i].style.display = "";  // Reset all rows to visible
+    }
+    
+    for (let i = 1; i < tr.length; i++) {
         let name = tr[i].getElementsByTagName("td")[0]; // Team Name
         let conf = tr[i].getElementsByTagName("td")[4]; // Conference
         let nameText = name ? name.textContent || name.innerText : "";
@@ -1322,7 +1326,8 @@
         // Show row if search input matches either name or conference
         tr[i].style.display = (nameText.toUpperCase().includes(input) || confText.toUpperCase().includes(input)) ? "" : "none";
     }
-  }
+}
+
 
 // function for tabs
   function openPage(pageName, elmnt, color) {
