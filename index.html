@@ -1312,26 +1312,33 @@
 
 <script>
 function searchFunction() {
-    let input = document.getElementById("input").value.toUpperCase();
+    let input = document.getElementById("input").value.toUpperCase(); // Get input value
     let table = document.getElementById("table");
     let tr = table.getElementsByTagName("tr");
-    
-    // Reset the display of all rows to visible before filtering
-    for (let i = 1; i < tr.length; i++) {
-        tr[i].style.display = "";  // Reset all rows to visible
+
+    // If input is empty, show all rows
+    if (input === "") {
+        for (let i = 1; i < tr.length; i++) {
+            tr[i].style.display = "";  // Make all rows visible
+        }
+        return;  // Exit early if input is empty
     }
-    
+
+    // Loop through all table rows (starting from 1 to skip header row)
     for (let i = 1; i < tr.length; i++) {
         let name = tr[i].getElementsByTagName("td")[0]; // Team Name
         let conf = tr[i].getElementsByTagName("td")[4]; // Conference
         let nameText = name ? name.textContent || name.innerText : "";
         let confText = conf ? conf.textContent || conf.innerText : "";
 
-        // Show row if search input matches either name or conference
-        tr[i].style.display = (nameText.toUpperCase().includes(input) || confText.toUpperCase().includes(input)) ? "" : "none";
+        // Show row if input matches either name or conference
+        if (nameText.toUpperCase().includes(input) || confText.toUpperCase().includes(input)) {
+            tr[i].style.display = "";  // Show the row
+        } else {
+            tr[i].style.display = "none";  // Hide the row
+        }
     }
 }
-
 
 // function for tabs
   function openPage(pageName, elmnt, color) {
